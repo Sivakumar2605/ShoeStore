@@ -1,0 +1,464 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap');
+
+*{
+    padding: 0px;
+    margin: 0px;
+}
+ #loadingpage{
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#loadingglow{
+    width: 300px;
+    height: 300px;
+    border-radius: 100%;
+    background-image: linear-gradient(90deg,#db3c75,#eca725,#cada7e,#eca725,#db3c75);
+    background-size: 400%;
+    background-size: 400%;
+    filter: blur(50px);
+    animation: glow 5s infinite linear;
+
+}
+@keyframes glow {
+    from{
+        background-position: 400%;
+    }
+    to{
+        background-position: 0%;
+    }
+}
+#loading{
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    border: 5px solid limegreen;
+    border-radius: 100%;
+    background-color: rgb(135, 207,235,0.541);
+    background-position: 400%;
+    background-size: 400%;
+    animation-name: shape;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+}
+@keyframes shape {
+    0%,100%,50%{
+               border-radius: 100%;
+    }
+    10%,90%{
+            border-radius: 30% 70% 70% 30% / 30% 30% 70% 70% ;
+    }
+    20%,80%{
+              border-radius: 75% 25% 70% 30% / 58% 30% 70% 42% ;
+    }
+    30%,70%{
+            border-radius: 75% 25% 24% 76% / 58% 30% 70% 42% ;
+    }
+    40%,60%{
+            border-radius: 75% 25% 24% 76% / 58% 63% 37% 42% ;
+    }
+}
+#loadingname{
+    font-size: 40px;
+    letter-spacing: 10px;
+    text-shadow: 2px 2px 2px black;
+    font-family: 'Amatic SC', cursive;
+}
+#loadingbar{
+    position: absolute;
+    left: 20px;
+    width: 95vw;
+    height: 5px;
+    bottom: 50px;
+    background-image: linear-gradient(to right top, #d16bb5, #c166bd, #ad64c5, #9463cd, #7363d4, #5e76e5, #4287f4, #0098ff, #00bcff, #00d8f5, #00eeb6, #5ffb65);
+    background-size: 400%;
+    background-position: 400%;
+    animation:loadingbar 5s linear 1 ;
+}
+@keyframes loadingbar {
+    
+    from{
+        width: 0px;
+        background-position: 400%;
+    }
+    to{
+        width: 95vw;
+        background-position: 0%;
+    }
+}
+#butload{
+    width: 200px;
+    height: 60px;
+    position: absolute;
+    bottom: 110px;
+    left: 670px;
+    color: white;
+    background-image: linear-gradient(90deg,purple,red);
+    border-radius: 10px 10px 10px 10px;
+    font-size: 26px;
+    letter-spacing: 10px;
+    transition: all 0.2s;
+}
+@keyframes button {
+    0%{
+        transform:skewX(0deg) rotatex(0deg);
+    }
+    20%{
+       transform: rotatez(20deg);
+    }
+    40%{
+        transform: rotatez(-20deg);
+
+    }
+    60%{
+        transform: rotatez(20deg);
+
+    }
+    80%{
+        transform: skewX(45deg);
+    }
+    100%{
+        transform:skewX(0deg);
+    }  
+}
+button:hover{
+    animation-name: button;
+    animation-duration: 0.8s;
+} 
+header{
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    position: absolute;
+    top: 0px;
+    display: none;
+    align-items: center;
+    justify-content: centre;
+}
+#headervid{
+    width: 100%;
+    filter:brightness(40%) ;
+    position: absolute;
+    bottom: -40px;
+
+}
+#navbar{
+    width: 100%;
+    height: 60px;
+    position: absolute;
+    top: 0px;
+    display: flex;
+    justify-content: start;
+    align-items: centre;
+    column-gap: 50px;
+    color: white;
+
+}
+#webpagelogo{
+    width: 60px;
+    margin-left: 30px;
+}
+#login{
+    position: absolute;
+    right: 30px;
+}
+h4{
+    cursor: pointer;
+    letter-spacing: 5px;
+    text-shadow: 2px 2px 2px black;
+    font-size: 35px;
+}
+#pagename{
+    position: absolute;
+    top: 35%;
+    left: 350px;
+    font-size: 40px;
+    color: white;
+    letter-spacing: 30px;
+    text-shadow: 2px 2p 2px black;
+    animation: slide 2s ease-in;
+}
+@keyframes slide {
+    from{
+        transform: translate(-450px);
+        filter: opacity(0);
+     }
+     to{
+        transform: translate(0px);
+        filter: opacity(1);
+     }
+}
+#search{
+    width: 60%;
+    height: 50px;
+    background-color: white;
+    position: absolute;
+    z-index: 3;
+    bottom: 50%;
+    left: 350px;
+    border-radius: 200px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    box-shadow: 5px 5px 5px black;
+    animation: slidedown 2s ease-in;
+}
+#searchid{
+    width: 90%;
+    height: 100%;
+    background-color:transparent;
+    border: none;
+    outline: none;
+    font-size: 24px;
+}
+i{
+    cursor: pointer;
+}
+@keyframes slidedown {
+    from{
+        transform: translate(0px,500px);
+        filter: opacity(0);
+    }
+    to{
+        transform: translate(0px,0px);
+        filter: opacity(1);
+    }
+    
+}
+.godown{
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    left: 50%;
+    bottom: 30px;
+    font-size: 50px;
+    color: white;
+    background-color: transparent;
+    border: none;
+    font-family: 'foldit',cursive;
+    text-shadow: 2px 2px 2px  black;
+}
+.godown:hover{
+    animation: button 0.2s linear;
+    cursor: pointer;
+}
+@keyframes button {
+    0%{
+        transform:skewX(0deg) rotatex(0deg);
+    }
+    20%{
+       transform: rotatez(20deg);
+    }
+    40%{
+        transform: rotatez(-20deg);
+
+    }
+    60%{
+        transform: rotatez(20deg);
+
+    }
+    80%{
+        transform: skewX(45deg);
+    }
+    100%{
+        transform:skewX(0deg);
+    }  
+}
+#latestshoesec{
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 100vh;
+    background-color: rgba(80, 82, 81, 0.715);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.shoerot{
+    width: 300px;
+    height: 300px;
+    background-color: rgb(93, 89, 89);
+    box-shadow: 5px 5px 5px black;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s;
+    position: relative;
+
+
+}
+.lsshoe{
+    width: 80%;
+    filter: drop-shadow(5px 5px 5px black);
+    transition: all 0.3s;
+}
+.shoerot:hover .lsshoe{
+    transform: rotate(-65deg) translateX(-50px) translateY(-130px ) scale(1.3);
+}
+
+.lsname{
+    position: absolute;
+    top: 0px;
+    color: hsla(15, 100%, 58%, 1);
+    text-shadow: 2px 2px 2px black;
+    font-size: 22px;
+    display: none;
+
+}
+.shoerot:hover{
+    transform: scale(1.2);
+}
+.lspara{
+    position: absolute;
+    left: 150px;
+    width: 120px;
+    font-size: 26px;
+    display: none;
+}
+.money{
+    position: absolute;
+    bottom: 35px;
+    font-size: 30px;
+    color: lawngreen;
+    text-shadow: 2px 2px 5px black;
+    display: none;
+}
+.shoerot:hover .lsname,.shoerot:hover .lspara,.shoerot:hover .money ,.shoerot:hover #buy{
+        display: block;
+}
+#latestshoeheading{
+    position: absolute;
+    color: white;
+    top: 30px;
+    font-size: 40px;
+    letter-spacing: 12px;
+    text-transform: capitalize;
+    text-shadow: 5px 5px 5px black;
+}
+#buttonls{
+    position: absolute;
+
+}
+#categarysec{
+    width: 100%;
+    height: 100vh;
+
+    top: 200vh;
+    position: absolute;
+    
+    background-color: black;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-content: space-evenly;
+    column-gap: 100px;
+
+}
+.catsec{
+    width: 180px;
+    height: 180px;
+    background-color: rgba(121, 114, 114, 0.563);
+    border-radius: 5px;
+    box-shadow: 5px 5px 5px black;
+    background-position: 220% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: transform 0.2s;
+    color:white;
+    font-size: 21px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    text-shadow: 5px 5px 5px black;
+    cursor: pointer;
+    
+}
+.catsec:hover{
+    transform: scale(1.3);
+}
+#Lifestyle{
+    background-image:url(../assets/image/life1.jpg) ;
+    width: 180px;
+    height: 180px;
+    
+    
+}
+#jordan{
+    background-image: url(../assets/image/jord.jpg);
+}
+#running{
+    background-image: url(../assets/image/runn.jpg);
+   
+    
+}
+#basketball{
+    background-image: url(../assets/image/basketball.webp);
+}
+#tennis{
+    background-image: url(../assets/image/tennis.jpg);
+}
+#golf{
+    background-image: url(../assets/image/golf.jpg);
+}
+#gym{
+    background-image: url(../assets/image/gym.jpg);
+}
+#athelets{
+    background-image: url(../assets/image/athelets.jpg);
+}
+#walking{
+    background-image: url(../assets/image/walking.jpg);
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+#up{
+    position: absolute;
+    left: 45%;
+    bottom: 10px;
+    font-size: 50px;
+    transform: rotate(180deg);
+}
+footer{
+    width: 100%;
+    height: 80px;
+    position: absolute;
+    top: 300vh;
+    background-color: gray;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+.fa-brands{
+    font-size: 50px;
+    position: relative;
+    left: 110vh;
+    padding-left: 30px;
+}
+#copyryt{
+    font-size: 16px;
+    font-weight: bold;
+    padding-left: 30px;
+}
+#buy{
+    font-size: 25px;
+    background-color: blueviolet;
+    width: 100px;
+    height: 30px;
+    position: absolute;
+    bottom: 5px;
+    display: none;
+}
+

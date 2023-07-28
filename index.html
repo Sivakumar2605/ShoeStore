@@ -1,0 +1,109 @@
+<!DOCTYPE htLifestyleml>
+<html lang="en">
+
+<head>
+    <title>shoestore</title>
+    <link rel="stylesheet" href="./css/home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="./javascript/loadingpagejs.js" defer></script>
+
+</head>
+
+<body>
+    <div id="loadingpage">
+        <div id="loadingglow"></div>
+        <div id="loading">
+            <h1 id="loadingname">Loading...</h1>
+        </div>
+        <button id="butload" onclick="loadbut()">ENTER</button>
+        <div id="loadingbar"></div>
+    </div>
+    <header id="header">
+        <video id="headervid" src="./assets/video/nikeshoevideo.mp4" autoplay muted loop></video>
+        <div id="navbar">
+            <img id="webpagelogo" src="./assets/image/shoe.png" alt="">
+            <h4>Home</h4>
+            <h4>Categery</h4>
+            <h4>Cart</h4>
+            <a href="./html/signuppage.html">
+                <h4 id="login">login</h4>
+            </a>
+        </div>
+        <h1 id="pagename">Morningstar Snekers</h1>
+        <div id="search">
+            <input id="searchid" type="text">
+            <i class="fa-solid fa-magnifying-glass fa-beat-fade"></i>
+        </div>
+        <a href="#latestshoesec"><button class="godown">V</button></a>
+    </header>
+    <SEction id="latestshoesec">
+        <h1 id="latestshoeheading">Latest shoe section</h1>
+        <div class="shoerot">
+            <h1 class="lsname">Nike 4567</h1>
+            <p class="lspara">Lorem, ipsum dolor. nike jordon</p>
+            <img class="lsshoe" src="./assets/image/shoe1.png" alt="">
+            <h2 class="money">Rs.1800/-</h2>
+            <button id="buy">Buy</button>
+        </div>
+        <div class="shoerot">
+            <h1 class="lsname"> Nike 2234</h1>
+            <p class="lspara">Lorem, ipsum dolor. nike sport</p>
+            <img class="lsshoe" src="./assets/image/shoe2.png" alt="">
+            <h2 class="money">Rs.1780/-</h2>
+            <button id="buy">Buy</button>
+
+        </div>
+        <div class="shoerot">
+            <h1 class="lsname"> Nike 7789</h1>
+            <p class="lspara">Lorem, ipsum dolor.nike walk</p>
+            <img class="lsshoe" src="./assets/image/shoe3.png" alt="">
+            <h2 class="money">Rs.12990/-</h2>
+            <button id="buy">Buy</button>
+
+        </div>
+        <a href="#categarysec"><button class="godown" id="buttonls">V</button></a>
+
+    </SEction>
+    <section id="categarysec">
+        <a href="./html/lifestylecatagary.html">
+            <div class="catsec" id="Lifestyle">Lifestyle</div>
+        </a>
+        <a href="./html/jordancatagary.html">
+            <div class="catsec" id="jordan">Jordan</div>
+        </a>
+        <a href="./html/rinngcatagary.html">
+            <div class="catsec" id="running">Running</div>
+        </a>
+        <a href="./html/basketball.html">
+            <div class="catsec" id="basketball">Basketball</div>
+        </a>
+        <a href="./html/tennsiscatagiry.html">
+            <div class="catsec" id="tennis">Tennis</div>
+        </a>
+        <a href="./html/golf.html">
+            <div class="catsec" id="golf">Golf</div>
+        </a>
+        <a href="./html/golf.html">
+            <div class="catsec" id="gym">gym</div>
+        </a>
+        <a href="./html/athelets.html">
+            <div class="catsec" id="athelets">athelets</div>
+        </a>
+        <a href="./html/walking.html">
+            <div class="catsec" id="walking">Walking</div>
+        </a>
+        <a href="#header"><button class="godown" id="up">V</button></a>
+
+    </section>
+    <footer>
+        <span id="copyryt">&copy;2023,morningstar snekars all rights reserved</span>
+        <i class="fa-brands fa-instagram"></i>
+        <i class="fa-brands fa-facebook"></i>
+        <i class="fa-brands fa-twitter"></i>
+        <i class="fa-brands fa-snapchat"></i>
+    </footer>
+</body>
+
+</html>
